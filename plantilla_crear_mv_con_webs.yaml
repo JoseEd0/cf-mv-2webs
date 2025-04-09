@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: "Plantilla para crear una Maquina Virtual en EC2 usando una AMI especifica (Cloud9Ubuntu22-2024-08-22T16-06) con 2 webs"
+Description: "Plantilla para crear una Maquina Virtual en EC2 usando una AMI especifica (Cloud9Ubuntu22-2025-03-26T13-17) con 2 webs"
 
 Parameters:
   InstanceName:
@@ -8,7 +8,7 @@ Parameters:
     Description: "Nombre de la instancia a crear"
   AMI:
     Type: String
-    Default: "ami-0aa28dab1f2852040"
+    Default: "ami-0e84f97592c6b078b"
     Description: "ID de AMI"
 
 Resources:
@@ -32,8 +32,8 @@ Resources:
           #!/bin/bash
           # Se ejecuta con usuario root por lo que no necesita sudo
           cd /var/www/html/
-          git clone https://github.com/utec-cc-2024-2-test/websimple.git
-          git clone https://github.com/utec-cc-2024-2-test/webplantilla.git
+          git clone https://github.com/JoseEd0/websimple.git
+          git clone https://github.com/JoseEd0/webplantilla.git
           ls -l
 
   InstanceSecurityGroup:
